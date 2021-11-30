@@ -1,0 +1,23 @@
+{
+  "name": "copy_ticket",
+  "version": "1.0.0",
+  "description": "a firefox extension for copy ticket title and url on backlog/wrike",
+  "main": "backlog.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:firefox": "web-ext run --source-dir ./extension-dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kent013/copyIssueTitleExtension.git"
+  },
+  "author": "kent013",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kent013/copyIssueTitleExtension/issues"
+  },
+  "homepage": "https://github.com/kent013/copyIssueTitleExtension#readme",
+  "devDependencies": {
+    "web-ext": "^6.6.0"
+  }
+}
