@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "CopyTitle",
-    "version": "1.0.1",
+    "version": "1.0.2",
   
     "description": "Copy Title and URL from Wrike / Backlog",
   
