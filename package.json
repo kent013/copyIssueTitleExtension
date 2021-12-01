@@ -1,6 +1,6 @@
 {
   "name": "copy_ticket",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a firefox extension for copy ticket title and url on backlog/wrike",
   "main": "backlog.js",
   "scripts": {

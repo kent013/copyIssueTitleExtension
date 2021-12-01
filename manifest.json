@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "CopyTitle",
-    "version": "1.0",
+    "version": "1.0.1",
   
     "description": "Copy Title and URL from Wrike / Backlog",
   
@@ -16,14 +16,20 @@
     "content_scripts": [
       {
         "matches": ["*://*.wrike.com/*"],
-        "js": ["util.js", "wrike.js"],
-        "css": ["common.css"], 
+        "js": ["src/js/common.js", "src/js/wrike.js"],
+        "css": ["src/css/common.css"], 
+        "run_at": "document_idle"
+      },
+      {
+        "matches": ["*://github.com/*"],
+        "js": ["src/js/common.js", "src/js/github.js"],
+        "css": ["src/css/common.css"], 
         "run_at": "document_idle"
       },
       {
         "matches": ["*://*.backlog.jp/view/*"],
-        "js": ["util.js", "backlog.js"],
-        "css": ["common.css"], 
+        "js": ["src/js/common.js", "src/js/backlog.js"],
+        "css": ["src/css/common.css"], 
         "run_at": "document_idle"
       }
     ]

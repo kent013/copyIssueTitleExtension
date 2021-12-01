@@ -10,29 +10,29 @@ function installCopyTitleButton(checkForCopyTitleButtonHeader, createCopyTitleTe
     window.hasCopyTitleRun = true
     
     var intervalId = setInterval(() => {
-        headers = checkForCopyTitleButtonHeader()
-        if(headers){
-            clearInterval(intervalId)
-            addCopyTitleButton(headers, () => {
-                const text = createCopyTitleText()
-                copyTextToClipBoard(text)
-            })
+        console.log('hogehoge')
+        header = checkForCopyTitleButtonHeader()
+        if(header == null){
+            return
         }
+        clearInterval(intervalId)
+        addCopyTitleButton(header, () => {
+            const text = createCopyTitleText()
+            if(text === undefined){
+                return
+            }
+            copyTextToClipBoard(text)
+        })
     }, 1000)
 }
 
-function addCopyTitleButton(parents, onclickFunction){
-    if(document.getElementById('copy_title_text_button') != null){
-        document.getElementById('copy_title_text_button').remove()
-    }
+function addCopyTitleButton(parent, onclickFunction){
+    document.querySelectorAll('#copy_title_text_button').forEach(e => e.remove());
     
-    for(var i = 0; i < parents.length; i++){
-        var parent = parents[i]
-        var copyButton = document.createElement('button')
-        copyButton.id = "copy_title_text_button"
-        copyButton.onclick = onclickFunction
-        parent.prepend(copyButton)
-    }
+    var copyButton = document.createElement('button')
+    copyButton.id = "copy_title_text_button"
+    copyButton.onclick = onclickFunction
+    parent.prepend(copyButton)
 }
 
 function copyTextToClipBoard(str){

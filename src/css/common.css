@@ -1,6 +1,6 @@
 #copy_title_text_button {
     width: 20px;
     height: 20px;
-    background-image: url('icons/border-48.png');
+    background-image: url('/icons/border-48.png');
     background-size: cover;
 }
