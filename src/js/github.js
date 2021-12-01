@@ -13,11 +13,11 @@
             return
         }
         var key = object.textContent
-        object = document.querySelector("meta[property='og:url']")
+        object = document.querySelector("a.js-pjax-history-navigate")
         if(!object){
             return
         }
-        var url = object.getAttribute('content')
+        var url = object.getAttribute('href')
         return key + " " + title + "\n" + url
     })
 })()
