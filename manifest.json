@@ -1,11 +1,11 @@
 {
-
     "manifest_version": 2,
     "name": "CopyTitle",
-    "version": "1.0.2",
+    "version": "1.0.3",
   
     "description": "Copy Title and URL from Wrike / Backlog",
-  
+    "permissions": ["contextMenus"],
+
     "icons": {
       "48": "icons/border-48.png"
     },

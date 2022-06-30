@@ -18,6 +18,6 @@
             return
         }
         var url = object.getAttribute('href')
-        return key + " " + title + "\n" + url
+        return key + " " + title + "\n" + 'https://github.com/' + url
     })
 })()
